@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- This section sets up page info, SEO, CSS, and JS -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wingman Bahrain | Online Chicken Wings Delivery</title>
+    <meta name="description" content="Order crispy chicken wings, combos and sides online from Wingman Bahrain."> 
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+</head>
+<body data-page="home"> <!-- logo + navigation -->
+    <header class="site-header"> 
+        <div class="container header-inner">
+            <div class="logo" aria-label="Wingman logo">
+                <span class="logo-icon"></span>
+                <img id="logo"  src="imges/logo.png" alt="logo">
+            
+                <span class="logo-text">Wingman-Bahrain</span>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation"> <!-- Main menu -->
+                <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html" class="">Menu</a></li>
+                <li><a href="offers.html" class="">Offers</a></li>
+                <li><a href="locations.html" class="">Locations</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="contact.html" class="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline" id="themeToggle" type="button">Dark mode</button>
+                <a href="menu.html" class="btn btn-primary cart-link">
+                    Cart <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    
+<main> <!-- main visual intro with title, text, and buttons -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Your Favorite Wings in Bahrain</h1>
+                <p>Order crispy, saucy chicken wings and combos in just a few clicks.</p>
+                <div class="hero-actions">
+                    <a href="menu.html" class="btn btn-primary">Start Your Order</a>
+                    <a href="offers.html" class="btn btn-secondary">View Offers</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="imges/chiken wings.jpeg" alt="Plate of chicken wings with dipping sauce" />
+            </div>
+        </div>
+    </section> <!-- showing highlighted menu items -->
+    <section class="section">
+        <div class="container">
+            <h2>Featured Items</h2>
+            <div class="card-grid">
+                <article class="card"> <!-- Duo Box item -->
+                    <h3>Duo Box </h3>
+                     <div class="container"> <img id="duoBox"  src="imges/Duo Box.jpg" alt="Duo Box"></div>
+                     
+                    <p>Two person combo - your choice of 2 mini sandwich or taco, 10 pcs chicken wings,
+                          with a suace of your choice
+                    <br><br> <br>   <b><p style="text-align: center;">5.900 BD</p></b>
+
+                    <button class="btn btn-small add-to-cart" data-item="Classic Buffalo Wings">Add to Cart</button> 
+                </article>
+                <article class="card"> <!-- Family Box item -->
+                    <h3>Family Box</h3>
+                    <img src="imges/Family Box.jpg" alt="Family Box">
+                    <p>4 x Mini Sandwiches of your choice 24 x Chicken Wings 2 flavors 12 x Chicken Bites 1 x Fries 1 x Side</p>
+                    <br><br> <b><p style="text-align: center;">13.300 BD</p></b>
+
+                    <button class="btn btn-small add-to-cart" data-item="Family Wing Box">Add to Cart</button>
+                </article>
+                <article class="card"> <!-- Buffalo Sandwich item -->
+                    <h3>Buffalo Crispy Chicken Sandwich</h3>
+                    <img src="imges/Buffalo Crispy Chicken Sandwich.jpg" alt="Buffalo Crispy">
+                    <p>Crispy chicken breast dipped in buffalo sauce topped with yogurt ranch sauce
+                         and lettuce served in toasted potato bread.</p> 
+                         <br>
+                         <b><p style="text-align: center;">2.800 BD</p></b>
+                    <button class="btn btn-small add-to-cart" data-item="Wingman Combo">Add to Cart</button>
+                </article>
+                 <article class="card"> <!-- Chicken & Rice item -->
+                    <h3>Chicken & Rice</h3>
+                    <img src="imges/Chicken & Rice.jpg" alt="Chicken & Rice">
+                    <p>Chicken & Rice Grilled chicken breast, served with basmatti rice and steamed vegetables and sauce of your choice.
+                         (Approx 500 calories, 35g protein, 50g fats) 
+
+                    </p>
+                    <b><p style="text-align: center;">2.200 BD</p></b>
+                    <button class="btn btn-small add-to-cart" data-item="Wingman Combo">Add to Cart</button>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+    <footer class="site-footer"> <!-- copyright + social media links -->
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Wingman Bahrain. All rights reserved.</p>
+            <div class="footer-social" aria-label="Social media">
+                
+                <a href="https://www.instagram.com/wingman_bh/?hl=en">
+                 <img src="imges/instagram logo.png" alt="Clickable Image" width="50">
+                     </a>
+                
+                      <a href="https://www.facebook.com/wingmanbh/">
+                 <img    src="imges/facebook logo.png" alt="Clickable Image" width="40">
+                     </a>
+            </div>
+        </div>
+        <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    </footer>
+</body>
+</html>

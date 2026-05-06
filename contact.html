@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wingman Bahrain | Contact</title>
+    <meta name="description" content="Contact Wingman Bahrain with questions about your order or our menu.">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+</head>
+<body data-page="contact">
+    <header class="site-header"> <!-- logo + navigation -->
+        <div class="container header-inner">
+            <div class="logo" aria-label="Wingman logo">
+               <img id="logo"  src="imges/logo.png" alt="logo">
+            
+                <span class="logo-text">Wingman-Bahrain</span>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+               
+                
+                <ul class="nav-links">
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="menu.html" class="">Menu</a></li>
+                <li><a href="offers.html" class="">Offers</a></li>
+                <li><a href="locations.html" class="">Locations</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline" id="themeToggle" type="button">Dark mode</button>
+                <a href="menu.html" class="btn btn-primary cart-link">
+                    Cart <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+  
+    <main class="section">
+    <div class="container contact-layout">  <!-- users can send messages or questions -->
+
+   
+        <section class="left-side">
+            <h1>Contact Us</h1>
+            <p>Have a question about your order or our menu? Send us a message.</p>
+
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name<span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email<span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message<span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </section>
+
+               <div class="dele">   <!-- decorative image -->
+            
+                <img src="imges/deliver.jpg" alt="dele">
+            </div>
+            
+
+            <aside class="contact-details">  <!-- branch info and quick contact options -->
+                <h2>Branch Contact</h2>
+                <p><strong>Address:</strong> Manama, Bahrain</p>
+                <p><strong>Phone:</strong> +973 1234 5678</p>
+                <p><strong>Email:</strong> info@wingmanbh.com</p>
+            </aside>
+        </div>
+
+    </div>
+</main>
+
+
+
+
+    <footer class="site-footer"> <!-- copyright + social media links -->
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Wingman Bahrain. All rights reserved.</p>
+            <div class="footer-social" aria-label="Social media">
+                 <a href="https://www.instagram.com/wingman_bh/?hl=en">
+                 <img src="imges/instagram logo.png" alt="Clickable Image" width="50">
+                     </a>
+                
+                      <a href="https://www.facebook.com/wingmanbh/">
+                 <img    src="imges/facebook logo.png" alt="Clickable Image" width="40">
+                     </a>
+            </div>
+        </div>
+        <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    </footer>
+</body>
+</html>

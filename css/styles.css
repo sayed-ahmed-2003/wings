@@ -1,0 +1,503 @@
+
+:root { /* light and dark colors */
+    --bg: #f7f7f7;
+    --bg-alt: #ffffff;
+    --text: #222222;
+    --accent: #1b48c4;
+    --accent-dark: #2c2ab0;
+    --border: #dddddd;
+}
+
+[data-theme="dark"] { /* Dark mode theme overrides */
+    --bg: #121212;
+    --bg-alt: #1f1f1f;
+    --text: #f5f5f5;
+    --accent: #0d03a3;
+    --accent-dark: #39e0e6;
+    --border: #333333;
+}
+
+* {
+    box-sizing: border-box; /* Basic reset for all elements */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Global body styles */
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%; /* Default image behavior */
+    display: block;
+}
+
+#logo{
+
+ width: 70px; /* Logo image size */
+height: 60px;
+}
+
+
+#duoBox{
+
+   
+    margin-top: 36px; /* Specific spacing for Duo Box image */
+
+}
+ 
+
+
+
+a {
+    color: inherit; /* Default link style */
+    text-decoration: none;
+}
+
+.container {
+    width: 90%; /* Main container used across pages */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-header {
+    background-color: var(--bg-alt); /* Header styling and sticky behavior */
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex; /* Inner header layout (logo, nav, actions) */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex; /* Logo area layout */
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.logo-icon {
+    font-size: 1.4rem; 
+}
+
+.main-nav {
+    position: relative; /* Navigation bar container */
+}
+
+.nav-links {
+    list-style: none; /* Navigation links layout */
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+}
+
+.nav-links a.active {
+    background-color: var(--accent); /* Style for active page link */
+    color: #fff;
+}
+
+.nav-toggle {
+    display: none; /* Mobile menu toggle (hidden on desktop) */
+    background: none;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.header-actions {
+    display: flex; /* Header buttons (cart, theme) */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn {
+    border-radius: 999px; /* Base button style */
+    padding: 0.45rem 0.9rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent); /* Primary button (main action) */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dark); 
+}
+
+.btn-secondary {
+    background-color: transparent; /* Secondary outlined button */
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.btn-outline {
+    background-color: transparent; /* Neutral outline button (theme toggle) */
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-small {
+    padding: 0.35rem 0.7rem; /* Smaller button variant */
+    font-size: 0.85rem;
+}
+
+.btn:active {
+    transform: scale(0.97); /* Click feedback */
+}
+
+.cart-link {
+    font-weight: 600; /* Cart link emphasis */
+}
+
+main {
+    min-height: 70vh; /* Make sure content area is tall enough */
+}
+
+.hero {
+    background: linear-gradient(135deg, #fff5f5, #ffecec); /* Hero background in dark mode */
+    padding: 2.5rem 0 2rem;
+}
+
+[data-theme="dark"] .hero {  
+    background: linear-gradient(135deg, #1b1b1b, #301818);
+}
+
+.hero-inner {
+    display: grid; /* Hero layout: text and image side by side */
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text h1 { 
+    font-size: 2.2rem; /* Hero heading style */
+    margin-bottom: 0.5rem;
+}
+ 
+.hero-text p {
+    margin-bottom: 1rem; /* Hero description */
+    max-width: 26rem;
+}
+
+.hero-actions {
+    display: flex; /* Hero buttons row */
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    justify-self: center; /* Hero image alignment */
+}
+
+.section {
+    padding: 2rem 0; /* Generic section spacing */
+}
+
+.section-header {
+    margin-bottom: 1rem; /* Section header spacing */
+}
+
+.section-header h1,
+.section-header h2 {
+    margin-bottom: 0.25rem; /* Grid layout for cards */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Card base style */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--bg-alt); 
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.price {
+    font-weight: 600; /* Price emphasis inside cards */
+    margin-top: 0.25rem;
+}
+
+.menu-filters {
+    display: flex; /* Menu filter buttons row */
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    border-radius: 999px; 
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.9rem;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.filter-btn.active {
+    background-color: var(--accent); /* Active filter state */
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.locations-layout,
+.about-layout,
+.contact-layout {
+    display: grid; 
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); /* Shared layout for locations, about and contact pages */
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.location-list { 
+    list-style: none; /* Branch locations list style */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.location-list h2 {
+    margin-bottom: 0.15rem; 
+}
+
+.map-placeholder {
+    border-radius: 0.75rem; /* Map placeholder styling */
+    border: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    font-size: 0.9rem;
+}
+
+#delivery {
+  width: 500px; /* Delivery image dimensions */
+  border-radius: 1px;
+}
+
+#delivery {
+    display: block; 
+    margin-left: auto; /* Align delivery image to the right */
+    margin-right: 0;
+}
+
+.about-highlight, 
+.contact-details { 
+    background-color: var(--bg-alt);   /* Highlight boxes for about & contact sidebar */
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    padding: 1rem;
+    margin-top: 1cm;        
+
+}
+
+.dele{
+     margin-top: 120px; /* Delivery image container on contact page */
+    height: 350px;
+    width: 429px;
+}
+
+
+.about-highlight ul {
+    margin-top: 0.5rem; /* Bullet list inside about highlight */
+    padding-left: 1.1rem;
+}
+
+form {
+    margin-top: 1rem; /* Contact form spacing */
+}
+
+.form-group {
+    margin-bottom: 0.75rem; /* Form group layout */
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+label {
+    font-weight: 600; /* Form labels */
+    font-size: 0.9rem;
+}
+
+input,
+textarea {
+    padding: 0.45rem; /* Inputs and textarea base styling */
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    font: inherit;
+    background-color: var(--bg-alt);
+    color: var(--text);
+}
+
+.error {
+    border-color: var(--accent); /* Error state styling */
+}
+
+.error-message {
+    color: var(--accent); /* Error message text */
+    font-size: 0.8rem;
+    min-height: 1rem;
+}
+
+.form-success {
+    margin-top: 0.5rem; /* Success message under form */
+    color: green;
+    font-size: 0.9rem;
+    min-height: 1rem;
+}
+
+.site-footer {
+    margin-top: 2rem;
+    padding: 1rem 0 2.5rem;  
+    border-top: 1px solid var(--border); /* Footer base styles */
+    background-color: var(--bg-alt);
+    position: relative;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Footer inner layout */
+    gap: 1rem;
+    font-size: 0.85rem;
+}
+
+.footer-social {
+    display: flex; /* Social icons row */
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+#scrollTopBtn {
+    position: fixed; /* Scroll-to-top button style */
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 999px;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--border);
+    background-color: var(--bg-alt);
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 800px) { /* Responsive layout for medium screens */
+    .hero-inner,
+    .locations-layout,
+    .about-layout,
+    .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 720px) { /* Responsive navigation + footer for smaller screens */
+    .nav-toggle {
+        display: inline-block;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 120%;
+        flex-direction: column;
+        background-color: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        padding: 0.5rem;
+        display: none;
+        min-width: 170px;
+    }
+      
+    .nav-links.open {
+        display: flex;
+    }
+
+    .header-inner {
+        align-items: flex-start;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+  
+.contact-layout {
+    display: flex; /* Contact page: split into left and right on wider screens */
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+
+.left-side {
+    flex: 2;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;   
+    gap: 1rem;               
+}
+
+
+
+     
+
+.right-side > * {
+    margin: 0;
+}
+
+@media (max-width: 900px) { /* Extra tweak for slightly larger mobiles/tablets */
+    .contact-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-side {
+        align-items: center;
+        width: 100%;
+    }
+
+    #delivery,
+    .contact-details {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+}
