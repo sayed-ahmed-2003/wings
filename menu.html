@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wingman Bahrain | Menu</title>
+    <meta name="description" content="Browse Wingman Bahrain's full menu of wings, sandwiches and sides.">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+</head>
+<body data-page="menu"> <!-- logo + navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo" aria-label="Wingman logo">
+            <img id="logo"  src="imges/logo.png" alt="logo">
+            
+                <span class="logo-text">Wingman-Bahrain</span>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                
+                <ul class="nav-links">
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="offers.html" class="">Offers</a></li>
+                <li><a href="locations.html" class="">Locations</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="contact.html" class="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline" id="themeToggle" type="button">Dark mode</button>
+                <a href="menu.html" class="btn btn-primary cart-link">
+                    Cart <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    
+<main class="section"> <!-- menu items, food categories -->
+    <div class="container">
+        <header class="section-header">
+            <h1>Menu</h1>
+            <p>Choose your wings, flavours and sides.</p>
+        </header>
+
+        <div class="menu-filters" aria-label="Filter menu by category"> <!-- filter buttons to switch between categories -->
+            <button class="filter-btn active" data-category="all" type="button">All</button>
+            <button class="filter-btn" data-category="wings" type="button">Wings</button>
+            <button class="filter-btn" data-category="sandwiches" type="button">Sandwiches</button>
+            <button class="filter-btn" data-category="sides" type="button">Sides</button>
+        </div>
+
+        <div class="card-grid menu-grid"> <!-- Food items grid -->
+            <article class="card menu-item" data-category="wings">
+                <img src="imges/8 pcs wings.jpg" alt="8wings">
+                <h3>Wing Man Wings-8pcs</h3>
+                <p>8 Pcs of wings with your choice of sauce</p>
+                <p class="price">BD 1.8</p>
+                <button class="btn btn-small add-to-cart" data-item="Buffalo Wings">Add to Cart</button>
+            </article>
+
+            <article class="card menu-item" data-category="wings">   
+                <img src="imges/50 pcs wings.jpg" alt="50wings">
+                 <h3>Wingman Wings - 50 Pcs</h3>
+                <p>50 Pcs of wings with your choice of sauce</p>
+                <p class="price">BD 8.8</p>
+                <button class="btn btn-small add-to-cart" data-item="Garlic Parmesan Wings">Add to Cart</button>
+            </article>
+
+            <article class="card menu-item" data-category="sandwiches">
+                <img src="imges/Triplets.jpg" alt="Triplets">
+                <h3>Triplets</h3>
+                <p>3 sliders sandwiches of your choice to taste them all!</p>
+                <p class="price">BD 3.8</p>
+                <button class="btn btn-small add-to-cart" data-item="Spicy Chicken Sandwich">Add to Cart</button>
+            </article>
+
+            <article class="card menu-item" data-category="sandwiches">
+                <img src="imges/Classic Wrap.jpg" alt="Wrap">
+                <h3>Classic Wrap</h3>
+                <p>chicken strips, cheese, shredded lettuce, and classic sauce.</p>
+                <p class="price">BD 1.8</p>
+                <button class="btn btn-small add-to-cart" data-item="Wingman Wrap">Add to Cart</button>
+            </article>
+
+            <article class="card menu-item" data-category="sides">
+                <img src="imges/Curly Fries.jpg" alt="Curly">
+                <h3>Curly Fries</h3>
+                <p>As an addition to your order</p>
+                <p class="price">BD 1.2</p>
+                <button class="btn btn-small add-to-cart" data-item="Fries">Add to Cart</button>
+            </article>
+
+            <article class="card menu-item" data-category="sides">
+                <img src="imges/Cheese Fries.jpg" alt="cheese">
+                <h3>Cheese Fries</h3>
+                <p>As an addition to your orde</p>
+                <p class="price">BD 1.8</p>
+                <button class="btn btn-small add-to-cart" data-item="Onion Rings">Add to Cart</button>
+            </article>
+        </div>
+    </div>
+</main>
+
+
+    <footer class="site-footer"> <!-- copyright + social media links -->
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Wingman Bahrain. All rights reserved.</p>
+            <div class="footer-social" aria-label="Social media">
+                <a href="https://www.instagram.com/wingman_bh/?hl=en">
+                 <img src="imges/instagram logo.png" alt="Clickable Image" width="50">
+                     </a>
+                
+                      <a href="https://www.facebook.com/wingmanbh/">
+                 <img    src="imges/facebook logo.png" alt="Clickable Image" width="40">
+                     </a>
+            </div>
+        </div>
+        <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    </footer>
+</body>
+</html>
